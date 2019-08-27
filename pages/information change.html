@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../styles/information change.css" rel="stylesheet" type="text/css"/>
+    <link href="../styles/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="../styles/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--时间选择js-->
+    <script src="../scripts/moment-with-locales.js"></script>
+    <script src="../scripts/bootstrap-datetimepicker.js"></script>
+
+	<title>修改信息</title>
+</head>
+<body>
+		<form action="">
+
+		<div class="form-group">
+         <label for="exampleFormControlFile1">选择头像</label>
+         <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+
+			<div class="pc-kk-form-list">
+				<input type="text" placeholder="昵称">
+			</div>
+			<div class="pc-kk-form-list pc-kk-form-list-clear">
+				<div class="nice-select" name="nice-select">
+					<input type="text" value="年龄" readonly>
+					<ul>
+						<li data-value="4">18</li>
+						<li data-value="5">19</li>
+						<li data-value="6">20</li>
+						<li data-value="7">21</li>
+						<li data-value="8">22</li>
+						<li data-value="9">23</li>
+					</ul>
+
+				</div>
+				<div class="nice-select" name="nice-select" style="float:right">
+					<input type="text" value="性别" readonly>
+					<ul>
+						<li data-value="male">男</li>
+						<li data-value="female">女</li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="pc-kk-form-list">
+				<input type="tel" placeholder="电话">
+			</div>
+
+            <div class="form-group row">
+               <div class="col-sm-12">
+                  <input type='text' placeholder="生日" class="form-control" id='datetimepicker3'/>
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span>
+                  </span>
+              </div>
+            </div>
+
+        <script type="text/javascript">
+          $(function () {
+            $('#datetimepicker3').datetimepicker({
+                locale: 'zh-cn',viewMode: 'days',format: 'YYYY/MM/DD'
+                  });
+                });
+        </script>
+			
+			<div class="pc-kk-form-list" style="height:auto">
+				<textarea>个性签名</textarea>
+			</div>
+			
+			<div class="pc-kk-form-btn">
+				<button>提交</button>
+			</div>
+		</form>
+		<div class="pc-kk-form-btn2">
+				<a href="myinformation.html"><button>返回</button></a>
+			</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+	<script>
+
+        $('[name="nice-select"]').click(function(e){
+
+            $('[name="nice-select"]').find('ul').hide();
+
+            $(this).find('ul').show();
+
+            e.stopPropagation();
+
+        });
+
+        $('[name="nice-select"] li').hover(function(e){
+
+            $(this).toggleClass('on');
+
+            e.stopPropagation();
+
+        });
+
+        $('[name="nice-select"] li').click(function(e){
+
+            var val = $(this).text();
+
+            $(this).parents('[name="nice-select"]').find('input').val(val);
+
+            $('[name="nice-select"] ul').hide();
+
+            e.stopPropagation();
+
+        });
+
+        $(document).click(function(){
+
+            $('[name="nice-select"] ul').hide();
+
+        });
+
+	</script>
+
+ </body>
+
+</html>

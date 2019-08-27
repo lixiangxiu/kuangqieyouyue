@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../styles/home.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../font_Icon/iconfont.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>首页</title>
+    
+  </head>
+
+  <body>
+    <header>
+	  <div class="container-fluid fixed-top py-1 px-0 m-0" style="background-color:#339966;">
+        <div class="row m-0">
+            <div class="col">
+             <div class="dropdown" style="margin-top:0px;#important">
+               <button style="background-color:green;"class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">我的
+               </button>
+			    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			    <a class="dropdown-item" href="mycertification.html">我的认证</a>
+			    <div class="dropdown-divider"></div>
+			    <a class="dropdown-item" href="myinformation.html">我的信息</a>
+			    <div class="dropdown-divider"></div>
+			    <a class="dropdown-item" href="mymessage.html">我的消息</a>
+			    <div class="dropdown-divider"></div>
+			    <a class="dropdown-item" href="我参与的.html">我的参与</a>
+			  </div>
+			</div>
+            </div>
+            <div class="col-auto text-black mb-1" style="vertical-align: middle; font-size: 1.5rem">活动预览</div>
+            <div class="col"></div>
+        </div>
+        <span class="text-white"></span>
+    </div>
+
+    </header>
+
+<section>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="http://www.cumt.edu.cn/"><img class="d-block w-100" src="../images/home/slide1.jpg" alt="First slide"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="http://www.cumt.edu.cn/"><img class="d-block w-100" src="../images/home/slide2.jpg" alt="Second slide"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="http://www.cumt.edu.cn/"><img class="d-block w-100" src="../images/home/slide3.jpg" alt="Third slide"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="http://www.cumt.edu.cn/"><img class="d-block w-100" src="../images/home/slide4.jpg" alt="First slide"></a>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../images/home/slide5.jpg" alt="Second slide">
+    </div>
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+      <!--用JS来设置间隔时间滚动页面(1.5秒)-->
+      <script>
+      $('#carouselExampleIndicators').carousel({
+        interval:2000,
+      });
+      </script>
+
+      <div class="container">
+           <div id="meun"><!--菜单栏开始-->
+              <ul class="nav nav-pills nav-fill">
+                 <li class="nav-item">
+                       <a href="#sport" class="nav-link active" style=" text-align: center;" data-toggle="tab"><img src="../images/home/sport.png" alt=""><br/>体育类</a>
+                 </li>&nbsp;
+                 <li class="nav-item">
+                       <a href="#game" id="youxi" class="nav-link" style=" text-align: center;" data-toggle="tab"><img src="../images/home/game.png" alt="" height="32px" width="32px" /><br/>游戏类</a>
+                 </li>&nbsp;
+                 <li class="nav-item">
+                       <a href="#travel" class="nav-link" style=" text-align: center;" data-toggle="tab"><img src="../images/home/travel.png" alt="" ><br/>出行类</a>
+                 </li>&nbsp;        
+              </ul>
+            </div>
+
+             <div class="tab-content">
+             <!--运动类开始-->
+              <div id="sport" class="tab-pane active">
+                <div class="container-fluid">
+                  <div class="row" >
+                     <div class="col-12 col-md-6" >
+                       <div class="row">
+                        <div class="col-6"><img class="d-block w-100" src="../images/home/ymq.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：羽毛球（单打）</p></h5><p class="details">发起者：小明&nbsp;&nbsp;人数限定：4人<br/>活动地点：南湖羽毛球馆<br/>活动时间：2019.9.1 15:00</p> 
+                         <a href="活动详情.html" class="btn btn-primary">查看详情</a>
+                        </div>
+                       </div>
+                     </div>
+
+                    <div class="col-12 col-md-6" >
+                      <div class="row">
+                        <div class="col-6">
+                         <img class="d-block w-100" src="../images/home/lq.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：篮球</p></h5><p class="details">发起者：李华&nbsp;&nbsp;人数限定：4人<br/>活动地点：二运篮球场<br/>活动时间：2019.9.2 16:00</p>
+                                <a href="#" class="btn btn-primary">查看详情</a>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+
+                  <div class="row" >
+                     <div class="col-12 col-md-6" >
+                       <div class="row">
+                        <div class="col-6"><img class="d-block w-100" src="../images/home/ymq.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：羽毛球（单打）</p></h5><p class="details">发起者：小明&nbsp;&nbsp;人数限定：4人<br/>活动地点：南湖羽毛球馆<br/>活动时间：2019.9.1 15:00</p> 
+                         <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                       </div>
+                     </div>
+
+                    <div class="col-12 col-md-6" >
+                      <div class="row">
+                        <div class="col-6">
+                         <img class="d-block w-100" src="../images/home/lq.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：篮球</p></h5><p class="details">发起者：李华&nbsp;&nbsp;人数限定：4人<br/>活动地点：二运篮球场<br/>活动时间：2019.9.2 16:00</p>
+                                <a href="#" class="btn btn-primary">查看详情</a>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!--运动类结束-->
+
+            <!--游戏类开始-->
+              <div id="game" class="tab-pane">
+                <div class="container-fluid">
+                  <div class="row" >
+                     <div class="col-12 col-md-6" >
+                       <div class="row">
+                        <div class="col-6"><img class="d-block w-100" src="../images/home/lol.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：LOL开黑</p></h5><p class="details">发起者：小明&nbsp;&nbsp;人数限定：5人<br/>活动地点：艾欧尼亚大区<br/>活动时间：2019.9.1 13:00</p> 
+                         <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                       </div>
+                     </div>
+
+                    <div class="col-12 col-md-6" >
+                      <div class="row">
+                        <div class="col-6">
+                         <img class="d-block w-100" src="../images/home/honor.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：王者荣耀</p></h5><p class="details">发起者：李华&nbsp;&nbsp;人数限定：3人<br/>活动地点：QQ安卓大区<br/>活动时间：2019.9.2 14:00</p>
+                                <a href="#" class="btn btn-primary">查看详情</a>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+
+                  <div class="row" >
+                     <div class="col-12 col-md-6" >
+                       <div class="row">
+                        <div class="col-6"><img class="d-block w-100" src="../images/home/lol.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：LOL开黑</p></h5><p class="details">发起者：小明&nbsp;&nbsp;人数限定：5人<br/>活动地点：艾欧尼亚大区<br/>活动时间：2019.9.1 13:00</p> 
+                         <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                       </div>
+                     </div>
+
+                    <div class="col-12 col-md-6" >
+                      <div class="row">
+                        <div class="col-6">
+                         <img class="d-block w-100" src="../images/home/honor.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：王者荣耀</p></h5><p class="details">发起者：李华&nbsp;&nbsp;人数限定：3人<br/>活动地点：QQ安卓大区<br/>活动时间：2019.9.2 14:00</p>
+                                <a href="#" class="btn btn-primary">查看详情</a>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+             </div>
+
+             <div id="travel" class="tab-pane">
+                <div class="container-fluid">
+                  <div class="row" >
+                     <div class="col-12 col-md-6" >
+                       <div class="row">
+                        <div class="col-6"><img class="d-block w-100" src="../images/home/suzhou.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：国庆出游（苏州）</p></h5><p class="details">发起者：小明&nbsp;&nbsp;人数限定：5人<br/>活动地点：江苏省苏州市<br/>活动时间：2019.10.1</p> 
+                         <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                       </div>
+                     </div>
+
+                    <div class="col-12 col-md-6" >
+                      <div class="row">
+                        <div class="col-6">
+                         <img class="d-block w-100" src="../images/home/station.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：拼车</p></h5><p class="details">发起者：李华&nbsp;&nbsp;人数限定：3人<br/>活动地点：徐州东站<br/>活动时间：2019.8.1 18:00</p>
+                                <a href="#" class="btn btn-primary">查看详情</a>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+
+                  <div class="row" >
+                     <div class="col-12 col-md-6" >
+                       <div class="row">
+                        <div class="col-6"><img class="d-block w-100" src="../images/home/suzhou.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：国庆出游（苏州）</p></h5><p class="details">发起者：小明&nbsp;&nbsp;人数限定：5人<br/>活动地点：江苏省苏州市<br/>活动时间：2019.10.1</p> 
+                         <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                       </div>
+                     </div>
+
+                    <div class="col-12 col-md-6" >
+                      <div class="row">
+                        <div class="col-6">
+                         <img class="d-block w-100" src="../images/home/station.png" alt="1">
+                        </div>
+                        <div class="col-6"><h5><p class="name">活动名称：拼车</p></h5><p class="details">发起者：李华&nbsp;&nbsp;人数限定：3人<br/>活动地点：徐州东站<br/>活动时间：2019.8.1 18:00</p>
+                                <a href="#" class="btn btn-primary">查看详情</a>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+             </div>  
+                  
+
+        </div>
+     </div> 
+
+     </section>
+
+<footer>
+            <nav class="navbar fixed-bottom py-0" style="background-color:#339966;">
+                <a class="navbar-brand m-0 text-center" href="home .html">
+                    <img src="../images/home/huodog.png" width="30" height="30" alt="首页">
+                    <h6 class="text-light mb-0 mt-1">首页</h6>
+                </a>
+                <a class="navbar-brand m-0 text-center" href="fabuhuodong.html">
+                    <img src="../images/home/aite.png" width="30" height="30" alt="发表">
+                    <h6 class="text-light mb-0 mt-1">发表</h6>
+                </a>
+                <a class="navbar-brand m-0 text-center" href="评论页.html">
+                    <img src="../images/home/pinglun.png" width="30" height="30" alt="评论">
+                    <h6 class="text-light mb-0 mt-1">评论</h6>
+                </a>
+            </nav>
+            <p class="my-4 text-muted text-center">2019 电子商务系项目制第一组</p>
+        </footer>
+    
+  </body>
+</html>

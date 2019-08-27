@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="矿且有约">
+    <meta name="author" content="第一组">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="../images/艾特我的圆.png">
+    <title>手机号注册</title>
+    <!-- Bootstrap 样式表 -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- 当前页面用到的自定义样式表 -->
+    <link href="../styles/login.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+<form class="form-signin">
+ <img class="mb-4" src="../images/log/艾特我的圆 (1).png" alt="" />
+ <div class="container-fluid" style="margin-top:1px;">
+    <form class="needs-validation pt-5 " novalidate>
+        <input type="text" class="form-control py-2 telregister" id="validationTooltip01" placeholder="输入手机号" required>
+        <div class="valid-tooltip">
+                请输入正确的手机号！
+        </div>
+        <div class="input-group">
+        <input type="text" class="form-control py-2 telregister" id="validationTooltip04" placeholder="输入验证码" required
+               maxlength="11">
+        <input type="button" id="btn" value="获取验证码" onclick="settime(this)"/>
+        <div class="invalid-tooltip">
+            请输入正确的验证码！
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-default btn-lg btn-block btn-primary" style="height:45px;" onclick="window.open('home.html')">登录</button>
+            </div>
+        </div>
+    </form>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+</form>
+</body>
+</html>

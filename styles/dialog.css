@@ -1,0 +1,32 @@
+html
+.talk_con{
+    position: relative;
+    width: 320px;
+    height: 100%;
+    margin: 20px 0 20px 120px;
+    background-color: #ffffcc;
+    border: 500px;
+}
+
+.atalk{
+    margin:100px;
+
+}
+.atalk span{
+    display:inline-block;
+    background: #339966;
+    border-radius:10px;
+    color:#fff;
+    padding:5px 10px;
+}
+.btalk{
+    margin:10px;
+    text-align:right;
+}
+.btalk span{
+    display:inline-block;
+    background:#ef8201;
+    border-radius:10px;
+    color:#fff;
+    padding:5px 10px;
+}

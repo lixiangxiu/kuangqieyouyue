@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../styles/home.css" rel="stylesheet" type="text/css"/>
+    <!--<link rel="stylesheet" href="css/selectize.default.css">-->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>活动发布</title>
+
+    <!--顶部横条-->
+    <header >
+      <div class="container-fluid fixed-top py-1 px-0 m-0" style="background-color:#339966;" >
+        <div class="row m-0" >
+            <div class="col mt-1">
+             <a href="home.html">
+              <img src="../images/back.png" width="30" height="30" style="top:10px;">
+             </a>
+        </div>
+        <div class="col-auto text-black mb-1" style="vertical-align: middle; font-size: 1.5rem" >发布活动</div>
+            <div class="col">
+            </div>
+        </div>
+        <span class="text-white"></span>
+    </header>
+
+  <body style="background-color:#FFFFFF;"> 
+<!--活动名称--> 
+</br>
+</br>
+<div class="container-fluid">
+  <div class="form-group" style="background-color:#FFFFFF;" >
+     <label for="exampleInputName">活动名称</label>
+     <div class="col-sm-10">
+    <input type="text" class="form-control" id="exampleInputName" placeholder="">
+  </div>
+  </div>
+
+<!--选择地点-->
+<div class="form-group" style="background-color:#FFFFFF;">
+     <label for="exampleInputName">选择地点</label>
+     <div class="col-sm-10">
+    <input type="text" class="form-control" id="exampleInputName" placeholder="">
+</div>
+</div>
+ &nbsp &nbsp
+ <div class="controls" align="center">
+            <button class="btn btn-success" style="width: 120px;height: 50px;background-color:#00AEAE;"><a href="map(百度地图).html">获取定位</a></button>
+          </div>
+
+</br>
+<!--允许人数-->
+<div class="form-group" style="background-color:#FFFFFF;">
+     <label for="exampleInputName">允许人数</label>
+     <div class="col-sm-10">
+    <input type="text" class="form-control" id="exampleInputName" placeholder="">
+  </div>
+</div>
+
+<!--联系方式-->
+<div class="form-group" style="background-color:#FFFFFF;">
+     <label for="exampleInputName">联系方式</label>
+     <div class="col-sm-10">
+    <input type="text" class="form-control" id="exampleInputName" placeholder="">
+  </div>
+</div>
+
+<!--活动时间-->
+<div class="form-group" style="background-color:#FFFFFF;">
+     <label for="exampleInputName">活动时间</label>
+     <div class="col-sm-10">
+    <input type="text" class="form-control" id="exampleInputName" placeholder="">
+  </div>
+</div>
+    
+<!--发布者-->
+<div class="form-group" style="background-color:#FFFFFF;">
+     <label for="exampleInputName">发布者</label>
+     <div class="col-sm-10">
+    <input type="text" class="form-control" id="exampleInputName" placeholder="">
+  </div>
+</div>
+
+<!--活动图片-->
+    <div style="position: relative;">
+        <!--设置input的position为absolute，使其不按文档流排版，并设置其包裹整个布局 -->
+        <!-- 设置opactity为0，使input变透明 -->
+        <!-- 只接受jpg，gif和png格式 -->
+        <input id="upload-input" style="position: absolute; top: 0; bottom: 0; left: 0;right: 0; opacity: 0;" type="file" accept="image/gif, image/jpg, image/png" onchange="showImg(this)" multiple />
+        <!-- 自定义按钮效果 -->
+        <div style="text-align: top">
+            <span style="font-size: 16px;">上传活动图片：</span>
+          </br>
+            &nbsp&nbsp&nbsp<img id="upload" src="../images/launch/艾特图标.png" style="width: 40px; height: 40px; vertical-align: middle;" />
+        </div>
+    </div>
+    <div id="imgContainer" style="margin-top: 10px;"></div>
+</body>
+<script type="text/javascript">
+    function showImg(obj) {
+        var files = obj.files
+        // document.getElementById("imgContainer").innerHTML = getImgsByUrl(files)
+        getImgsByFileReader(document.getElementById("imgContainer"), files)
+    }
+
+    // 使用window.URL.createObjectURL(file)读取file实例并显示图片
+    function getImgsByUrl(files) {
+        var elements = ''
+        for (var i = 0; i < files.length; i++) {
+            var url = window.URL.createObjectURL(files[i])
+            elements += "<img src='"+ url + "' style='width: 360px; height: 300px; vertical-align: middle; margin-right: 5px;' />"
+        }
+        return elements
+    }
+
+    // 使用FileReader读取file实例并显示图片
+    function getImgsByFileReader(el, files) {
+        for (var i = 0; i < files.length; i++) {
+            let img = document.createElement('img')
+            img.setAttribute('style', 'width: 360px; height: 300px; vertical-align: middle; margin-right: 5px;')
+            el.appendChild(img)
+            var reader = new FileReader()
+            reader.onload = function(e) {
+                img.src = e.target.result
+            }
+            reader.readAsDataURL(files[i]) 
+        }
+    }
+</script>
+            
+<!--活动简介-->
+<div class="form-group" style="background-color:#FFFFFF;">
+     <label for="exampleInputName">活动简介</label>
+      <div class="col-sm-10">
+        <textarea name="hdjianjie" id="" cols="30" rows="10" class="form-control"></textarea>
+ </div>
+</div>
+
+<!--活动类型-->
+  <div class="form-group" style="background-color:#FFFFFF;" >
+     <label for="exampleInputName">活动类型</label>
+     <div class="col-sm-10">
+      <div class="btn-group">
+ <select style="width: 110px;height: 50px;">
+        <option value="1">运动</option>
+        <option value="2">出玩</option>
+        <option value="3">游戏</option>
+        <option value="4">其他</option>
+    </select>
+    <script>
+        $(function() {
+            $('select').selectize({});
+        });
+    </script>
+  </div>
+</div>
+</div>
+  
+  <!--标签-->
+ <div class="form-group10" style="background-color:#FFFFFF;" >
+     <label for="exampleInputName10">标签</label>
+     <div class="col-sm-10">
+      <div class="btn-group">
+ <select style="width: 110px;height: 50px;">
+        <option value="1">羽毛球</option>
+        <option value="2">乒乓球</option>
+        <option value="3">网球</option>
+        <option value="4">游泳</option>
+        <option value="5">瑜伽</option>
+        <option value="6">跑步</option>
+        <option value="7">其他运动</option>
+        <option value="8">拼车</option>
+        <option value="9">旅游</option>
+        <option value="10">其他出玩</option>
+        <option value="11">王者荣耀</option>
+        <option value="12">英雄联盟</option>
+        <option value="13">斗地主</option>
+        <option value="14">麻将</option>
+        <option value="15">乒乓球</option>
+        <option value="16">其他游戏</option>
+    </select>
+    <script>
+        $(function() {
+            $('select').selectize({});
+        });
+    </script>
+  </div>
+</div>
+</div>
+    
+<!--完成发布按钮-->
+  <div class="form-group" style="background-color:#FFFFFF;" >
+     <label for="exampleInputName"></label>
+     <div class="col-sm-10">
+  </div>
+ <div class="controls" align="center">
+            <button class="btn btn-success" style="width: 120px;height: 50px;background-color:#00AEAE;"><a href="fabuchenggong.html">完成发布</a></button>
+          </div>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<!--重新编辑按钮-->
+<div class="controls" align="center">
+            <button class="btn btn-success" style="width: 120px;height: 50px;background-color:#00AEAE;"><a href="fabuhuodong.html">重新编辑</a></button>
+          </div>
+    </div>
+     </div>  
+</div>
+
+ <section>
+     
+    </section>
+
+    <footer>
+            <p class="my-4 text-muted text-center">2019 电子商务系项目制第一组</p>
+        </footer>
+    </body>
